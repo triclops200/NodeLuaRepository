@@ -1,0 +1,4 @@
+This is a readme for the NodeLuaRepository
+To set up, make a folder you want the server to keep all the saves and files in.
+Put the NodeServer.js  and the RunServer.sh in it.
+To run, just execute the RunServer.sh file.
