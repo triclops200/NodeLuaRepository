@@ -15,8 +15,15 @@ if(data[i].charCodeAt(0)<48 ||data[i].charCodeAt(0)>57&& good == true)
     }
 }
 if(good == true){
-fs.readFile('./'+data+'.lua', function (err, data) {
-  socket.write(data+"\n",'ascii');
+fs.readFile('./'+data+'.lua', function (err, dat) {
+  if(err)
+  {
+    fs.readFile('Errorscripts/Nonexistant.lua',function(err,da){
+      socket.write(da+"\n",'ascii');      
+      });
+    return;
+  }
+  socket.write(dat+"\n",'ascii');
 });
 }
 });
